@@ -1,0 +1,21 @@
+<div class="container d-flex justify-content-left pb-4">
+  <h1>Your selected task:</h1>
+</div>
+<div class="container d-flex justify-content-left pb-4">
+  <div class="row">
+    <h2><%= @task.title %></h2>
+    <p><%= @task.details %></p>
+    <p>Done:
+      <% if @task.completed %>
+        <i class="fa-solid fa-square-check m-2"></i>
+      <% else %>
+        <i class="fa-regular fa-square m-2"></i>
+      <% end %>
+     </p>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-left pb-4">
+  <%= link_to 'List all tasks', tasks_path, class: "btn btn-primary me-4" %>
+  <%= link_to 'Edit task', edit_task_path, class: "btn btn-primary" %>
+</div>
